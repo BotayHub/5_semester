@@ -1,0 +1,159 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{mathtext}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage[left=2cm, right=2cm, top=2.00cm]{geometry}
+\usepackage[section]{placeins}
+
+\title{Отчёт о выполнении лабораторной работы 7.4 <<Исследование поглощения
+  вторичного космического излучения в веществе>>}
+\author{Маланчук С.В.}
+% \author{Плохой Красный Коммунист}
+\date{29.10.2020}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+
+\begin{document}
+
+\begin{flushright}
+    Выполнила:
+    \\
+    Маланчук С.В.,
+    \\
+    878 группа
+    % \it{Плохой Красный Коммунист}
+\end{flushright}
+
+\begin{center}
+    \begin{Large}
+        \textbf{Отчёт о выполнении лабораторной работы 7.4 <<Исследование поглощения
+  вторичного космического излучения в веществе>>}
+    \end{Large}
+\end{center}
+
+% \maketitle
+
+\parindent=1cm \textbf{Цель работы:} с помощью телескопа, состоящего из двух
+сцинтилляционных детекторов, работающих в схеме совпадений, измеряется
+зависимость интенсивности космического излучения в лаборатории (на уровне моря)
+от толщины поглотителей из различных материалов. На основе этих измерений
+определяются эффективные длины поглощения мягкой и жесткой компонент космики в
+свинце и железе, абсолютные величины их вертикальных интенсивностей  и сечение
+рождения электронно-позитронных пар в этих материалах.
+
+\parindent=1cm \textbf{Оборудование:} телескоп, состоящий из двух
+сцинтилляционных детекторов; схема совпадений; свинцовые блоки.
+\begin{center}
+    \textbf{Теория}
+\end{center}
+Жесткая компонента:
+\begin{equation}
+    \label{eq:(1)}
+    \pi^+ \to \mu^+ + \nu_\mu, \  \pi^- \to \mu^- + \tilde{\nu}_\mu,
+\end{equation}
+Электронно-фотонная компонента:
+\begin{equation}
+    \label{eq:(2)}
+    \pi^0 \to \gamma + \gamma
+\end{equation}
+Сечение образования электронно-позитронных пар:
+\begin{equation}
+    \label{eq:(3)}
+    \sigma_{pair} = \frac{28}{9}Z^2\alpha \left(\frac{e^2}{mc^2}\right)^2\left(\ln\frac{2\hbar \omega}{mc^2} - \frac{109}{42} - \left(\alpha Z\right)^2\right)
+\end{equation}
+Для свинца
+\begin{equation}
+    \label{eq:(3)}
+    \sigma_{pair} =11Z^2\alpha r_0^2 = 11Z^2\frac{e^6}{\hbar m^2 c^5}
+\end{equation}
+\newpage
+\begin{center}
+    \textbf{Ход работы}
+\end{center}
+\begin{center}
+    \textbf{Измерения и наблюдения}
+\end{center}
+\begin{center}
+    \begin{tabular}{|c|c|c|c|}
+      \hline
+      \# опыта & $t$, с & \# импульсов & Пластины \\ \hline
+      1 & 600 & 172 & нет \\ \hline
+      2 & 600 & 139 & 1 \\ \hline
+      3 & 600 & 147 & 2 \\ \hline
+      4 & 600 & 121 & 3 \\ \hline
+      5 & 600 & 131 & 4 \\ \hline
+      6 & 600 & 115 & 5 \\ \hline
+      7 & 600 & 128 & 6 \\ \hline
+      8 & 600 & 112 & 7 \\ \hline
+      9 & 600 & 120 & 8 \\ \hline
+      10 & 600 & 132 & 9 \\ \hline
+      11 & 600 & 149 & 9 \\ \hline
+   \end{tabular}
+\end{center}
+\begin{center}
+    \begin{tabular}{|c|c|}
+      \hline
+      \# пластины & $d$, мм \\ \hline
+      1 & 19,3 \\ \hline
+      2 & 19,1 \\ \hline
+      3 & 19,4 \\ \hline
+      4 & 19,4 \\ \hline
+      5 & 19,3 \\ \hline
+      6 & 19,5 \\ \hline
+      7 & 20,2 \\ \hline
+      8 & 19,2 \\ \hline
+      9 & 19,4 \\ \hline
+   \end{tabular}
+\end{center}
+\begin{center}
+    \textbf{Обработка}
+\end{center}
+\begin{center}
+    \begin{tabular}{|c|c|c|c|c|c|c|c|}
+      \hline
+      Опыт & $N_{imp}$ & $\sigma_{N_{imp}}$ & Пластины & $d_{sum},$, мм & $\sigma_{d_{sum}}$, мм & $\displaystyle \frac{N_{imp}(d_{sum})}{N_{imp}(d_{all})} - 1$ & $\sigma$ \\ \hline
+1 & 172 & 13,1 & 0 & 0,0 & 0,00 & 0,30 & 0,05  \\ \hline
+2 & 139 & 11,8 & 1 & 19,3 & 0,05 & 0,05 & 0,01 \\ \hline
+3 & 147 & 12,1 & 2 & 38,4 & 0,10 & 0,11 & 0,02  \\ \hline
+4 & 121 & 11,0 & 3 & 57,8 & 0,15 & -0,08 & 0,01  \\ \hline
+5 & 131 & 11,4 & 4 & 77,2 & 0,20 & -0,01 & 0,00  \\ \hline
+6 & 115 & 10,7 & 5 & 96,5 & 0,25 & -0,13 & 0,02  \\ \hline
+7 & 128 & 11,3 & 6 & 116,0 & 0,30 & -0,03 & 0,01  \\ \hline
+8 & 112 & 10,6 & 7 & 136,2 & 0,35 & -0,15 & 0,03  \\ \hline
+9 & 120 & 11,0 & 8 & 155,4 & 0,40 & -0,09 & 0,02  \\ \hline
+10 & 132 & 11,5 & 9 & 174,8 & 0,45 & 0,00 & 0  \\ \hline
+    \end{tabular}
+\end{center}
+Получаем графики:
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.3]{plot2.png}
+    \label{fig:plot2}
+\end{figure}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.3]{plot1.png}
+    \label{fig:plot1}
+\end{figure}
+\FloatBarrier
+Обе зависимости аппроксимируются экспонентами.
+\\
+У первого графика (число частиц от толщины) она имеет вид $f(x) = 48,8\cdot
+\exp(-0,035x) + 121,8$; тогда эффективная длина пробега будет приближенно равна
+$28,6$ мм.
+\newpage
+\begin{center}
+    \textbf{Обсуждение}
+\end{center}
+Выполнив данную лабораторную работу, мы установили зависимость интенсивности
+вторичного космического излучения от толщины свинцовых поглотителей. Заметили,
+что как интенсивность излучения, так и отношение мягкой компоненты к жесткой
+убывает экспоненциально. Нашли эффективную длину пробега (около $28,6$ мм).
+\begin{center}
+    \textbf{Вывод}
+\end{center}
+Эффективная длина пробега мягкой компоненты в свинце равна около $28,6$ мм.
+\end{document}
