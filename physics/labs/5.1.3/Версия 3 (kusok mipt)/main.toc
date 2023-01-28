@@ -1,0 +1,7 @@
+\babel@toc {russian}{}
+\contentsline {section}{\numberline {1}Описание работы}{3}{section.1}% 
+\contentsline {subsection}{\numberline {1.1}Установка}{3}{subsection.1.1}% 
+\contentsline {subsection}{\numberline {1.2}Теоритическая часть}{3}{subsection.1.2}% 
+\contentsline {section}{\numberline {2}Ход работы}{5}{section.2}% 
+\contentsline {subsection}{\numberline {2.1}ВАХ тиратрона $I_a = f(U_c)$ на экране осциллографа С1-83}{5}{subsection.2.1}% 
+\contentsline {subsection}{\numberline {2.2}ВАХ в статическом режиме}{7}{subsection.2.2}% 
