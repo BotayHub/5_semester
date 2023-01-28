@@ -1,0 +1,156 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{mathtext}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage[left=2cm, right=2cm, top=2.00cm]{geometry}
+\usepackage[section]{placeins}
+
+\title{Отчёт о выполнении лабораторной работы 10.1 <<Электронный парамагнитный резонанс>>}
+\author{Маланчук С.В.}
+% \author{Плохой Красный Коммунист}
+\date{17.09.2020}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+
+\begin{document}
+
+\begin{flushright}
+    Выполнила:
+    \\
+    Маланчук С.В.,
+    \\
+    878 группа
+    % \it{Плохой Красный Коммунист}
+\end{flushright}
+
+\begin{center}
+    \begin{Large}
+        \textbf{Отчёт о выполнении лабораторной работы 10.1 <<Электронный парамагнитный резонанс>>}
+    \end{Large}
+\end{center}
+
+% \maketitle
+
+\parindent=1cm \textbf{Цель работы:} исследовать электронный парамагнитный
+резонанс в молекуле ДПФГ, определить $g$-фактор электрона, измерить ширину линии
+ЭПР.
+
+\parindent=1cm \textbf{Оборудование:} радиоспектроскоп, вольтметр, трансформатор
+ЛАТР, осциллограф, блок питания, генератор мегагерцового диапазона, образец ДФПГ.
+\begin{center}
+    \textbf{Теория}
+\end{center}
+
+Энергетический уровень электрона в присутствии магнитного поля $B$ расщепляется
+на два подуровня. Расстояние между ними равно
+\begin{equation}
+    \label{eq:(1)}
+    \Delta E = E_2 - E_1 = 2 \mu B
+\end{equation}
+Между уровнями возможны переходы. Они могут возбуждаться внешним высокочастотным
+магнитным полем. Резонансное значение частоты определяется из соотношения
+\begin{equation}
+    \label{eq:(2)}
+    \hbar \omega_0 = \Delta E = 2 \mu B
+\end{equation}
+При переходе с нижнего на верхний уровень квант энергии поглощается, а при
+обратном переходе излучается квант той же частоты. Возбуждение электронных
+резонансных переходов ЭМ полем с частотой $\omega_0$ называется электронным
+парамагнитным резонансом.
+\\
+Без внешнего высокочастотного поля заселенность верхнего и нижнего уровней $N_u$
+и $N_d$ определяется температурой и описывается формулой Больцмана
+\begin{equation}
+    \label{eq:(3)}
+    \frac{N_u}{N_d} = \exp \left( - \frac{\Delta E}{k T} \right)
+\end{equation}
+Гиромагнитное соотношение
+\begin{equation}
+    \label{eq:(4)}
+    \mu = \gamma \vec{M}
+\end{equation}
+Если магнитный момент выражается в магнетонах Бора, а механический в единицах
+$\hbar$, то связь выражается через фактор Ланде
+\begin{equation}
+    \label{eq:(5)}
+    \frac{\mu}{\mu_B} = \frac{g \vec{M}}{\hbar}
+\end{equation}
+Можно выразить $g$-фактор через определяемые экспериментально величины
+\begin{equation}
+    \label{eq:(6)}
+    g = \frac{\hbar \omega_0}{\mu_B B}
+\end{equation}
+\newpage
+\begin{center}
+    \textbf{Ход работы}
+\end{center}
+
+\begin{center}
+    \textbf{Измерения и наблюдения}
+\end{center}
+Резонансная и половинные частоты:
+\\
+$f_{res}= 126,76 \pm 0,02\text{МГц}$
+\\
+$f_h= 126,97 \pm 0,02\text{МГц}$
+\\
+$f_l= 126,49 \pm 0,02 \text{МГц}$
+Тогда добротность контура:
+$$Q= \frac{f}{\Delta f} = \frac{f_{res}}{f_h - f_l} = \frac{126,76}{0,48} \approx
+264,1$$
+$$\varepsilon_Q = \varepsilon_{f_{res}} + \varepsilon_{\Delta f} \approx
+\varepsilon_{\Delta f} = 0,08$$
+$$\sigma_Q = 21$$
+$$Q = (2,6 \pm 0,21) \cdot 10^2$$
+Пробная катушка:
+\\
+$N = 45$
+\\
+$d = 15,2 \pm 0,1 \text{мм}$
+\\
+Зная также ЭДС $\varepsilon_i = (2,51 \pm 0,01) \cdot 10^{-3}\text{В}$ и частоту $\nu = 50
+\text{Гц}$, найдем величину модулирующего поля:
+$$B=\sqrt{2} \frac{2 \varepsilon_i}{\pi^2d^2N\nu} \approx 1,52 \cdot 10^{-3}
+\text{Тл} = 1,52 \text{мТл}$$
+$$\varepsilon_B = \varepsilon_{\varepsilon_i} + 2\varepsilon_d = 0,003 + 0,013
+= 0,016$$
+$$\sigma_B = 0,024 \text{мТл}$$
+$$B = 1,52 \pm 0,024 \text{мТл}$$
+Для полуширины на полувысоте линии резонансного поглощения получим
+$$\Delta B= \frac{A_{half}}{A_{full}} B = 0,146 \text{мТл}$$
+Калибровочный график (напряжение на пробной катушке от внешнего):
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.3]{plot1.png}
+    \label{fig:plot1}
+\end{figure}
+$$B_0=\frac{V_t}{NS 2 \pi \nu} = 7,03 \pm 0,45 \text{мТл}$$
+Тогда
+$$g = 1,9 \pm 0,2$$
+График зависимости резонансной частоты от силы тока:
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[scale=0.3]{plot2.png}
+    \label{fig:plot2}
+\end{figure}
+% \begin{figure}[ht!]
+%     \centering
+%     \includegraphics[scale=0.4]{plot1.png}
+%     \caption{$\alpha = 0,033$}
+%     \label{fig:plot1}
+% \end{figure}
+\newpage
+\begin{center}
+    \textbf{Обсуждение}
+\end{center}
+Выполнив данную лабораторную работу, мы измерили $g$-фактор электрона,
+пронаблюдав явление ЭПР. Он оказался равен $g = 1,9 \pm 0,2$, что совпадает с
+табличным значением.
+\begin{center}
+    \textbf{Вывод}
+\end{center}
+$g$-фактор электрона $g = 1,9 \pm 0,2$, что совпадает с табличным значением.
+\end{document}
