@@ -1,0 +1,216 @@
+\documentclass[a4paper,12pt]{article}
+%%% Работа с русским языком
+\usepackage[unicode, pdftex]{hyperref}
+\usepackage{cmap}					% поиск в PDF
+\usepackage{mathtext} 				% русские буквы в формулах
+\usepackage[T2A]{fontenc}			% кодировка
+\usepackage[utf8]{inputenc}			% кодировка исходного текста
+\usepackage[english,russian]{babel}	% локализация и переносы
+\usepackage{indentfirst}
+\frenchspacing
+
+
+\renewcommand{\epsilon}{\ensuremath{\varepsilon}}
+\renewcommand{\phi}{\ensuremath{\varphi}}
+\renewcommand{\kappa}{\ensuremath{\varkappa}}
+\renewcommand{\le}{\ensuremath{\leqslant}}
+\renewcommand{\leq}{\ensuremath{\leqslant}}
+\renewcommand{\ge}{\ensuremath{\geqslant}}
+\renewcommand{\geq}{\ensuremath{\geqslant}}
+\renewcommand{\emptyset}{\varnothing}
+
+%%% Дополнительная работа с математикой
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools} % AMS
+\usepackage{icomma} % "Умная" запятая: $0,2$ --- число, $0, 2$ --- перечисление
+
+%% Номера формул
+%\mathtoolsset{showonlyrefs=true} % Показывать номера только у тех формул, на которые есть \eqref{} в тексте.
+%\usepackage{leqno} % Нумереация формул слева
+
+%% Свои команды
+\DeclareMathOperator{\sgn}{\mathop{sgn}}
+
+%% Перенос знаков в формулах (по Львовскому)
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}
+	{\hbox{$\mathsurround=0pt #1$}}{}}
+
+%%% Работа с картинками
+\usepackage{graphicx}  % Для вставки рисунков
+%\graphicspath{{images/}{images2/}}  % папки с картинками
+\setlength\fboxsep{3pt} % Отступ рамки \fbox{} от рисунка
+\setlength\fboxrule{1pt} % Толщина линий рамки \fbox{}
+\usepackage{wrapfig} % Обтекание рисунков текстом
+
+%%% Работа с таблицами
+\usepackage{array,tabularx,tabulary,booktabs} % Дополнительная работа с таблицами
+\usepackage{longtable}  % Длинные таблицы
+\usepackage{multirow} % Слияние строк в таблице
+
+%%% Теоремы
+\theoremstyle{plain} % Это стиль по умолчанию, его можно не переопределять.
+\newtheorem{theorem}{Теорема}[section]
+\newtheorem{proposition}[theorem]{Утверждение}
+
+\theoremstyle{definition} % "Определение"
+\newtheorem{corollary}{Следствие}[theorem]
+\newtheorem{problem}{Задача}[section]
+
+\theoremstyle{remark} % "Примечание"
+\newtheorem*{nonum}{Решение}
+
+%%% Программирование
+\usepackage{etoolbox} % логические операторы
+
+%%% Страница
+\usepackage{extsizes} % Возможность сделать 14-й шрифт
+\usepackage{geometry} % Простой способ задавать поля
+\geometry{top=25mm}
+\geometry{bottom=35mm}
+\geometry{left=25mm}
+\geometry{right=20mm}
+%
+\usepackage{fancyhdr} % Колонтитулы
+\pagestyle{fancy}
+%\renewcommand{\headrulewidth}{0pt}  % Толщина линейки, отчеркивающей верхний колонтитул
+% 	\lfoot{Нижний левый}
+% 	\rfoot{Нижний правый}
+% 	\rhead{Махсудов Умар Б04-906}
+% 	\chead{Верхний в центре}
+% 	\lhead{Верхний левый}
+%	\cfoot{Нижний в центре} % По умолчанию здесь номер страницы
+\usepackage{lastpage}
+\fancyhead[R]{Махсудов Умар Б04-906}
+\fancyhead[L]{}
+\fancyhead[C]{}
+
+\usepackage{setspace} % Интерлиньяж (расстояние между строками)
+%\onehalfspacing % Интерлиньяж 1.5
+%\doublespacing % Интерлиньяж 2
+%\singlespacing % Интерлиньяж 1
+
+\usepackage{lastpage} % Узнать, сколько всего страниц в документе.
+
+
+
+
+\usepackage[usenames,dvipsnames,svgnames,table,rgb]{xcolor}
+\hypersetup{				% Гиперссылки
+	unicode=true,           % русские буквы в раздела PDF
+	pdftitle={Заголовок},   % Заголовок
+	pdfauthor={Автор},      % Автор
+	pdfsubject={Тема},      % Тема
+	pdfcreator={Создатель}, % Создатель
+	pdfproducer={Производитель}, % Производитель
+	pdfkeywords={keyword1} {key2} {key3}, % Ключевые слова
+	colorlinks=true,       	% false: ссылки в рамках; true: цветные ссылки
+	linkcolor=red,          % внутренние ссылки
+	citecolor=black,        % на библиографию
+	filecolor=magenta,      % на файлы
+	urlcolor=cyan           % на URL
+}
+
+
+%\usepackage[style=authoryear,maxcitenames=2,backend=biber,sorting=nty]{biblatex}
+
+\usepackage{multicol} % Несколько колонок
+
+\usepackage{tikz} % Работа с графикой
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepackage{floatrow}
+\DeclareFloatSeparators{mysep}{\hspace{3cm}}
+\thisfloatsetup{floatrowsep=mysep}
+
+
+%Настройки кода
+\usepackage{listings}
+\usepackage{color}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\lstset{frame=tb,
+	language=C++,
+	aboveskip=3mm,
+	belowskip=3mm,
+	showstringspaces=false,
+	columns=flexible,
+	basicstyle={\small\ttfamily},
+	numbers=left,
+	numberstyle=\tiny\color{gray},
+	keywordstyle=\color{mauve},
+	commentstyle=\color{dkgreen},
+	stringstyle=\color{dkgreen},
+	breaklines=true,
+	breakatwhitespace=true,
+	tabsize=3,
+	extendedchars=\true
+}
+
+
+
+
+\author{Махсудов Умар}
+\title{Название работы}
+\date{\today}
+
+
+
+\newcommand{\e}[1]{
+	\cdot 10^{#1}	
+}
+
+\newcommand{\s}[0]{
+	\;	
+}
+
+\newcommand{\picref}[1]{
+	\text{рис(\ref{#1})}
+}
+
+\begin{document}
+	\maketitle
+	\begin{abstract}
+		
+	\end{abstract}
+	\begin{enumerate}
+		\item
+		Каким образом при помещении активной среды зеемановского гироскопа в магнитное поле происходит расщепление частот встречных волн?
+		
+		
+		В расщеплении частот встречных волн играют роль сразу два эффекта: эффект Зеемана и затягивание частоты генерации. 
+		\subsection{Эффект Зеемана}
+		
+		
+		Эффект Зеемана- эффект расщипления линий атомных спектров в магинтном поле. Благодаря этому эффекту контур усиления активной среды лазера под действием магнитного поля расщепляется на два сдвинутых относительно прежнего центра контура частоты: 
+		\begin{equation}\label{key}
+			\Delta\nu_z=\pm\frac{g\mu_B}{h}H=\pm\frac{ge}{4\pi m_e}H\s [СИ]
+		\end{equation} 
+	где g=1.3 - фактор расщипления, $ \mu_B=e\hbar/2m_e $ - магнетон Бора. Одна из встречных волн попадает в более высокочастотный, а друга в менее высокочастотный контур. Однако это пока никак не влияет на разничу частот между встречными волнами. 
+	\subsection{Затягивание частоты генерации}
+	
+	
+	Благодаря явлению затягивания частоты генерации, механизм работы которого будет рассмотрен в вопросе 12, резонансные частоты соответсвующих мод сдвигаются к центру той линии усиления, в пределах которой они находятся. В результате одна из встречных волн, попавшая в более незкочастотный контур и находящаяся правее соответствующего центра усиления будет затягиваться в сторону меньших частот, а вторая волна, попав в более высокочастотный контур усиления, напротив, будет затягиваться в сторону более высоких частот. Тем самым между встречными волными образуется дополнительная разница частот, которая позволяет избежать синхронизации мод.
+	\item
+	В чем отличия механического гироскопа от лазерного и от интерферометра Саньяка?
+
+
+	Меанический гироскоп, по принципу работы, фундаментально отличается от лазерного. Его работа основана на законе сохранения момента импульса, за счет которого он сохраняет свое направление при поворотах тела на котором он установлен. 
+	
+	Лазерный гироскоп и интерферометр Саньяка для своей раоты используют эффект Саньяка, который заключается в появлении фазового сдвига встречных волн при распространении во вращающемся кольцевом контуре. В отличае от механического гироскопа, такие устройства не сохраняют своего положения в пространстве и измеряют не угол, а угловую скорость, которая определяется по частоте сдвига интерференционной картинки, попадающей на оптические датчики.
+	
+	\item 
+	Каковы аналоги явления захвата частоты в механике и электричестве?
+	
+	
+	В механике широко известно явление синхронизации, когда два или несколько независимых осцилляторов колеблящихся с разными параметрами (фаза, частота), при наличии связи между ними, со временем, начинают синхронизироваться. В радиотехнике также присутствует аналогичный эффект. В качестве примера можно привести синхронизацию электронных часов внешним воздействием высокостабильного генератора, в результате которой обеспечивается высокая точность времени в системе транспорта. Синхронизация мощных генераторов периодических колебаний с помощью слабого воздействия от внешнего высокостабильного генератора позволяет существенно улучшить их характеристики, такие как стабильность частоты, флуктуации амплитуды и фазы и другие
+	\item 
+	В чем сущность явления затягивания частоты в лазере?
+	
+	
+	Явление затягивания частоты к центру контура связано аномальной дисперсией активной среды. Показатель преломления вещества зависит от длины волны. Для частот меньших центральной, показатель преломления уменьшается, за счет чего резонансные частоты соответствующих мод растут и сдвигаются к центру линии. Для мод с частотами большими центальной, показатель преломления становится больше $ \Rightarrow $ резонансные частоты меньше. Т.е все частоты сдвигаются ближе к центру.
+	\end{enumerate}
+	
+	
+	
+	
+\end{document}
