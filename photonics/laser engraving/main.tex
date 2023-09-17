@@ -1,0 +1,102 @@
+\documentclass[a4paper]{article}
+\usepackage{amsmath,amsthm,amssymb} % amsmath и др.
+\usepackage[pdftex,bookmarks=true]{hyperref} % добавляет в pdf файл ссылки. Важно: должен стоять перед mathtext!
+
+\usepackage{mathtext}
+\usepackage{textcomp}
+\usepackage[T1,T2A]{fontenc}
+\usepackage{float}
+\usepackage{indentfirst}
+%\usepackage{physics}
+\usepackage{wrapfig}
+
+
+\usepackage[dvips, pdftex]{graphicx}
+\usepackage{caption}
+\graphicspath{{pictures/}}
+\DeclareGraphicsExtensions{.png, .jpg}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{multirow}
+\captionsetup[figure]{labelfont={bf},labelformat={default},labelsep=period,name={Рис.}}
+
+% ВАЖНО: ПЕРЕД ПУБЛИКАЦИЕЙ ПРОВЕРИТЬ НА ОСТАВШИЕСЯ МЕТКИ TODO !
+
+\DeclareMathOperator*\lowlim{\underline{lim}}
+\DeclareMathOperator*\uplim{\overline{lim}}
+
+\usepackage[left=20mm, top=20mm, right=20mm, bottom=20mm, footskip=10mm]{geometry}
+\usepackage{wrapfig}
+
+\usepackage{comment}
+
+\graphicspath{ {images/} }
+\usepackage{multicol}
+\setlength{\columnsep}{1cm}
+
+\addto\captionsrussian{\def\refname{Список используемой литературы}}
+
+\begin{document}
+\begin{titlepage}
+  \begin{center}
+    \large
+    Московский физико-технический институт \\ (национальный исследовательский университет)
+     
+    \vspace{0.75cm}
+     
+    \textbf{Факультет физической и квантовой электроники}
+     
+    Кафедра фотоники
+    \vfill
+    
+    %\line(1,0){300} \\
+    \Large
+    \textbf{Лабораторная работа} \\
+    \textit{Лазерная гравировка} \\
+    %\line(1,0){300}
+     
+    \vfill
+\end{center}
+
+\vbox{
+\hfill
+\vbox{
+\hbox{\textbf{Выполнили:}}
+\hbox{Мазуренко Илья Б04-006}
+\hbox{Белостоцкий Артемий Б04-006}
+\hbox{Яшин Прохор Б04-006}
+\hbox{Ионидис Екатерина Б04-006}
+\hbox{Шарапов Алексей Б04-006}
+\hbox{Плюскова Наталья Б04-004}
+%
+}%
+} 
+
+
+\vfill
+ 
+\begin{center}
+    г. Долгопрудный, Московская область \\
+    %\today
+\end{center}
+\end{titlepage}
+
+\newpage
+
+\tableofcontents
+\newpage
+\input{0_Цель_работы}
+
+\input{1_Теория}
+
+\input{2_Эксперимент}
+
+\input{3_Выводы}
+
+\newpage
+
+\input{4_Задачи}
+
+%\input{5_Приложение}
+
+\end{document}
